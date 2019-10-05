@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { View, Text } from 'react-native'
 
-export class App extends Component {
+export default class App extends Component {
     constructor(props) {
         super(props)
     }

@@ -1,15 +1,7 @@
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import AppNavigator from './app.navigator'
+import { createAppContainer } from 'react-navigation';
 
-export default class App extends Component {
-    constructor(props) {
-        super(props)
-    }
-    render() {
-        return <View>
-            <Text>starting</Text>
-        </View>
-
-
-    }
-}
+export default function initialize() {
+    return createAppContainer(AppNavigator)
+} 

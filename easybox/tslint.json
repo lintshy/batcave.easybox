@@ -1,0 +1,103 @@
+{
+  "extends": [
+    "tslint:latest",
+    "tslint-eslint-rules",
+    "tslint-consistent-codestyle",
+    "tslint-config-prettier",
+    "tslint-react",
+    "tslint-immutable"
+  ],
+  "linterOptions": {
+    "exclude": ["node_modules/**/*"]
+  },
+  "rules": {
+    "align": [true],
+    "arrow-parens": [true, "ban-single-arg-parens"],
+    "eofline": false,
+    "restrict-plus-operands": true,
+    "newline-per-chained-call": false,
+    "arrow-return-shorthand": false,
+    "prefer-template": true,
+    "interface-name": [true, "never-prefix"],
+    "no-submodule-imports": false,
+    "max-line-length": [false],
+    "member-ordering": [false],
+    "no-magic-numbers": false,
+    "member-access": [true, "no-public"],
+    "no-bitwise": false,
+    "no-duplicate-imports": false,
+    "no-null-keyword": true,
+    "no-switch-case-fall-through": true,
+    "object-literal-shorthand": true,
+    "one-line": [false],
+    "ordered-imports": [false],
+    "prefer-conditional-expression": false,
+    "quotemark": [true, "single", "jsx-double"],
+    "semicolon": [true, "never"],
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "never",
+        "singleline": "never"
+      }
+    ],
+    "variable-name": [true, "ban-keywords"],
+    "whitespace": [
+      true,
+      "check-decl",
+      "check-operator",
+      "check-module",
+      "check-separator",
+      "check-type"
+    ],
+    // ESLint rules for TSLint (tslint-eslint-rules).
+    "array-bracket-spacing": [true, "never"],
+    "block-spacing": [true, "always"],
+    "brace-style": [
+      true,
+      "1tbs",
+      {
+        "allowSingleLine": true
+      }
+    ],
+    "curly": true,
+    "no-constant-condition": true,
+    "no-control-regex": true,
+    "no-duplicate-case": true,
+    "no-empty-character-class": true,
+    "no-ex-assign": true,
+    "no-extra-boolean-cast": true,
+    "no-extra-semi": true,
+    "no-inner-declarations": true,
+    "no-invalid-regexp": true,
+    "no-irregular-whitespace": true,
+    "no-multi-spaces": false,
+    "no-regex-spaces": true,
+    "object-curly-spacing": [true, "always"],
+    "object-literal-key-quotes": [false],
+    "ter-indent": false,
+    "ter-prefer-arrow-callback": [true],
+    "array-type": [true, "array"],
+    "interface-over-type-literal": false,
+    "use-isnan": true,
+    "valid-typeof": true,
+    "no-unused-variable": true,
+    "prefer-const": true,
+    // Functional rules
+    "no-array-mutation": true,
+    // https://hackernoon.com/rethinking-javascript-death-of-the-for-loop-c431564c84a8
+    "no-loop-statement": true,
+    // Consistent code style rules
+    "early-exit": true,
+    // "early-exit": [true, { "max-length": 4 }],
+    // tslint-react rules.
+    "jsx-no-lambda": false,
+    "jsx-no-multiline-js": false,
+    "jsx-wrap-multiline": false,
+    "jsx-alignment": true,
+    "jsx-boolean-value": false,
+    "object-literal-sort-keys": false,
+    "no-console": false,
+    "no-use-before-declare": false
+  }
+}

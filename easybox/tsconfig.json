@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": { 
+      "*": ["types/*"] 
+    },
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    // "resolveJsonModule": true,
+    "jsx": "react-native",
+    "lib": ["es2017"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    // "importHelpers": true,
+    // "noEmitHelpers": true,
+    "noImplicitReturns": false,
+    "noImplicitAny": false,
+    // "noUnusedLocals": true,
+    "skipLibCheck": true, // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/24573
+    "sourceMap": false,
+    "strict": false,
+    "target": "es3"
+  },
+  "exclude": ["node_modules"],
+  "types": [
+    "typePatches", 
+    "types"
+  ]
+}

@@ -16,7 +16,7 @@ export class PlayerBoard extends Component<{ navigation: NavigationScreenProp<an
     render() {
         const { navigation } = this.props
         const url = navigation.getParam('url')
-        console.log(url)
+
         return <MediaPlayer
             url={url}
             icon={''} />

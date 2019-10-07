@@ -12,7 +12,10 @@ const AppNavigator = createStackNavigator({
         screen: Dashboard,
     },
     MediaPlayer: {
-        screen: PlayerBoard
+        screen: PlayerBoard,
+        navigationOptions: {
+            header: null,
+        }
     }
 }, {
     initialRouteName: 'Home',

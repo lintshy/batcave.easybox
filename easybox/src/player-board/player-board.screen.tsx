@@ -7,19 +7,21 @@ import { MediaPlayer } from '../media-player/media-player'
 export class PlayerBoard extends Component<{ navigation: NavigationScreenProp<any, any> }>{
     constructor(props) {
         super(props)
-        console.log(this.props)
+        const { navigation } = this.props
+        navigation.addListener('willBlur', () => {
+            Orientation.unlockAllOrientations()
+        })
     }
 
     render() {
         const { navigation } = this.props
         const url = navigation.getParam('url')
         console.log(url)
-        return <View>
-            <MediaPlayer
-                url={url}
-                icon={''} />
+        return <MediaPlayer
+            url={url}
+            icon={''} />
 
-        </View>
+
     }
 
 

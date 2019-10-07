@@ -45,8 +45,8 @@ const styles = StyleSheet.create(
     {
         container: {
             flex: 1,
-            width: '100%',
-            height: '100%'
+            width: 800,
+            height: 800
         },
         mediaPlayer: {
             flex: 1,

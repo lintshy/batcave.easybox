@@ -5,3 +5,9 @@ export type MediaPlayerProps = {
     icon?: string
 
 }
+
+export type MediaPlayerState = {
+    isLoading: boolean
+    isEmptySource?: boolean
+    isPaused?: boolean
+}

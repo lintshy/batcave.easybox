@@ -3,12 +3,16 @@ import { View, Text, StyleSheet } from 'react-native'
 import Video from 'react-native-video'
 import GoogleCast, { CastButton } from 'react-native-google-cast'
 import { MediaPlayerProps } from './media-player.types'
+import Orientation from 'react-native-orientation-locker'
+
 
 export class MediaPlayer extends Component<MediaPlayerProps>{
     constructor(props) {
         super(props)
     }
     componentDidMount() {
+
+        Orientation.lockToLandscape()
         const { url } = this.props
         GoogleCast.castMedia({
             mediaUrl: url
@@ -22,6 +26,8 @@ export class MediaPlayer extends Component<MediaPlayerProps>{
                 onBuffer={this.onBuffer}
                 onError={this.onError}
                 style={styles.mediaPlayer}
+                fullscreen={true}
+                fullscreenOrientation={'landscape'}
             />
             <CastButton style={{ width: 24, height: 24 }} />
 

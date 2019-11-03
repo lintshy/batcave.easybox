@@ -12,10 +12,7 @@ export const SplashScreen: React.SFC<{
     const [error, setError] = useState(false)
     const [errorText, setErrorText] = useState('')
     useEffect(() => {
-        const params = ['tvgId', 'tvgName',
-            'tvgLogo',
-            'groupTitle',
-            'url']
+        const params = ['genre', 'region', 'tvgLogo', 'groupTitle', 'url']
 
         getIptvUrls(params).then(
             results => {

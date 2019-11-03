@@ -10,10 +10,16 @@ import { SplashScreen } from '../splash/splash.screen'
 
 const AppNavigator = createStackNavigator({
     Splash: {
-        screen: SplashScreen
+        screen: SplashScreen,
+        navigationOptions: {
+            header: null,
+        }
     },
     Home: {
         screen: Dashboard,
+        navigationOptions: {
+            header: null,
+        }
     },
     MediaPlayer: {
         screen: PlayerBoard,

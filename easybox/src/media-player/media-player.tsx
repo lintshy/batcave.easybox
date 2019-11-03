@@ -71,9 +71,9 @@ const styles = StyleSheet.create(
         mediaPlayer: {
             height: height - statusBarSize,
             alignSelf: "stretch",
-            width: width,
-            minWidth: height,
-            minHeight: width,
+            width: height,
+            minWidth: width,
+            minHeight: height - statusBarSize,
 
 
         }

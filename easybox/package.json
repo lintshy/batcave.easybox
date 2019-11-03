@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "@types/node-fetch": "^2.5.3",
+    "appcenter": "2.5.0",
+    "appcenter-analytics": "2.5.0",
+    "appcenter-crashes": "2.5.0",
     "lodash": "^4.17.15",
     "react": "^16.10.2",
     "react-native": "0.61.2",

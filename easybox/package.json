@@ -10,6 +10,8 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@types/node-fetch": "^2.5.3",
+    "lodash": "^4.17.15",
     "react": "^16.10.2",
     "react-native": "0.61.2",
     "react-native-gesture-handler": "^1.4.1",
@@ -32,6 +34,7 @@
     "eslint": "^6.5.1",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.56.0",
+    "react-native-snap-carousel": "^3.8.1",
     "react-test-renderer": "16.9.0"
   },
   "jest": {

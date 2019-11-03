@@ -1,44 +1,69 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, Dimensions, Image } from 'react-native'
 import { MediaPlayer } from '../media-player/media-player'
-import { urlIndia } from '../url-library/url-india'
-import Orientation from 'react-native-orientation-locker'
-import { NavigationScreenProp } from 'react-navigation'
 
-export class Dashboard extends Component<{ navigation: NavigationScreenProp<any, any> }>{
+import Orientation from 'react-native-orientation-locker'
+import { NavigationScreenProp, ScrollView } from 'react-navigation'
+import Carousel from 'react-native-snap-carousel'
+import * as _ from 'lodash'
+
+import { channel } from '../iptv/iptv.types'
+
+const { height, width } = Dimensions.get('window')
+
+export class Dashboard extends Component<{ navigation: NavigationScreenProp<any, any>, channels: channel[] }>{
+    entries: any
     constructor(props) {
         super(props)
-        console.log(this.props)
+
+
     }
     componentDidMount() {
+
         Orientation.unlockAllOrientations()
+
+
     }
     render() {
 
-        return <View
-            style={styles.container}>
+        const { navigation } = this.props
+        const channels = navigation.getParam('channels')
+        return <ScrollView
+            contentContainerStyle={styles.container}
+        >
             <Text>Dashboard</Text>
-            <TouchableOpacity onPress={this.handleNavigation}>
-                <View>
-                    <Text>Mazhavil Manorama</Text>
-                </View>
-            </TouchableOpacity>
-        </View>
+            {_.map(channels, (channel: channel) => {
+                return <TouchableOpacity onPress={() => this.handleNavigation(channel)}>
+                    <View>
+                        <Text>{channel.groupTitle}</Text>
+                    </View>
+                </TouchableOpacity>
+            })}
+
+
+        </ScrollView>
 
 
     }
-    handleNavigation = () => {
-        const channel = urlIndia.items[0]
+
+
+    handleNavigation = (channel: channel) => {
+
         const { navigation } = this.props
         navigation.navigate('MediaPlayer', {
-            'url': channel.url
+            'url': channel.url,
+            'title': channel.groupTitle
         })
+    }
+    handleSelection = (index) => {
+        console.log(index)
     }
 }
 
 const styles = StyleSheet.create({
     container: {
         width: '100%',
-        height: '100%'
-    }
+
+    },
+
 })

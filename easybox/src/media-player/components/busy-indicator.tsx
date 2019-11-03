@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { View, StyleSheet, ActivityIndicator, Dimensions } from 'react-native'
 
-const { height, width } = Dimensions.get('window');
+const { height } = Dimensions.get('window');
 
 export class BusyIndicator extends Component<{
     visible: boolean

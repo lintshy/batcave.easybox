@@ -39,7 +39,9 @@ export class MediaPlayer extends Component<MediaPlayerProps, MediaPlayerState>{
                 resizeMode={"stretch"}
                 onReadyForDisplay={this.onReadyForDisplay}
             />
-            <CastButton style={{ width: 24, height: 24 }} />
+            <View >
+                <CastButton style={styles.cast} />
+            </View>
 
         </View>
     }
@@ -76,6 +78,7 @@ const styles = StyleSheet.create(
             minHeight: height - statusBarSize,
 
 
-        }
+        },
+        cast: { position: 'absolute', width: 24, height: 24, color: '#ffffff', top: 50, zIndex: 1000 }
     }
 )

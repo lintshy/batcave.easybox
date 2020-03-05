@@ -1,4 +1,4 @@
-![GitHub Logo](/src/assets/Logo.png)
+![GitHub Logo](/easybox/src/assets/Logo.png)
 
 # Free IPTV Channel player for Android.
 
